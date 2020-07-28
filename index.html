@@ -1,79 +1,117 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PepTV: Survey Form</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PepTV: Survey Form</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" ></script>
-    <h1 id="title">PepTV Survey Form</h1>
-    <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
-    <form id="survey-form">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <h1 id="title">PepTV Survey Form</h1>
+  <p id="description">
+    We appreciate you for taking the time to complete this survey
+  </p>
+  <form id="survey-form">
+    <div class="form-cluster">
+      <label for="name" id="name-label">Name</label>
+      <input
+        id="name"
+        type="text"
+        pattern="[A-Za-z]+\s[A-Za-z]+"
+        placeholder="firstname surname"
+        required
+      />
+    </div>
 
-        <div class="form-cluster">
-            <label for="name" id="name-label">Name</label>
-            <input id="name" type="text" pattern="[A-Za-z]+\s[A-Za-z]+" placeholder="firstname surname" required>
-        </div>
+    <div class="form-cluster">
+      <label for="email" id="email-label">Email</label>
+      <input id="email" type="email" required placeholder="your email" />
+    </div>
 
-        <div class="form-cluster">
-            <label for="email" id="email-label">Email</label>
-            <input id="email" type="email" required placeholder="your email">
-        </div>
-        
-        <div class="form-cluster">
-            <label for="number" id="number-label">Age</label>
-            <input id="number" type="number" min="10" max="99" placeholder="your age"> 
-        </div>
+    <div class="form-cluster">
+      <label for="number" id="number-label">Age</label>
+      <input
+        id="number"
+        type="number"
+        min="10"
+        max="99"
+        placeholder="your age"
+      />
+    </div>
 
-        <div class="form-cluster">
-            <label for="dropdown" id="dropdown-label">What's your location?</label>
-            <select name="locations" id="dropdown">
-                <option value="" disabled selected value>--select an option--</option>
-                <option value="Lagos">Lagos</option>
-                <option value="Abuja">Abuja</option>
-                <option value="Port Harcourt">Port Harcourt</option>
-                <option value="Calabar">Calabar</option>
-            </select>
-        </div>
-        
-        <div class="form-cluster">
-            <p>What's your current plan?</p>
-            <label>
-                <input type="radio" value="premium" name="plan">
-                Premium
-            </label>
-            <label>
-                <input type="radio" value="compact-plus" name="plan">
-                Compact Plus
-            </label>
-            <label>
-                <input type="radio" value="compact" name="plan">
-                Compact
-            </label>
-            <label>
-                <input type="radio" value="lite" name="plan">
-                Lite
-            </label>
-        </div>
+    <div class="form-cluster">
+      <label for="dropdown" id="dropdown-label">What's your location?</label>
+      <select name="locations" id="dropdown">
+        <option value="" disabled selected value>--select an option--</option>
+        <option value="Lagos">Lagos</option>
+        <option value="Abuja">Abuja</option>
+        <option value="Port Harcourt">Port Harcourt</option>
+        <option value="Calabar">Calabar</option>
+      </select>
+    </div>
 
-        <div class="form-cluster">
-            <p>Which of these areas would you like to see more channels of? <span>(Check all that apply)</span></p>
-            <label><input name="promote" value="movies-entertainment" type="checkbox">Movies & Entertainment</label>
-            <label><input name="promote" value="documentaries-lifestyle" type="checkbox">Documentaries & Lifestyle</label>
-            <label><input name="promote" value="sport" type="checkbox">Sport</label>
-            <label><input name="promote" value="kids-teens" type="checkbox">Kids & Teens</label>
-            <label><input name="promote" value="news-commerce" type="checkbox">News & Commerce</label>
-        </div>
+    <div class="form-cluster">
+      <p class="form-para">What's your current plan?</p>
+      <label>
+        <input type="radio" value="premium" name="plan" />
+        Premium
+      </label>
+      <label>
+        <input type="radio" value="compact-plus" name="plan" />
+        Compact Plus
+      </label>
+      <label>
+        <input type="radio" value="compact" name="plan" />
+        Compact
+      </label>
+      <label>
+        <input type="radio" value="lite" name="plan" />
+        Lite
+      </label>
+    </div>
 
-        <div class="form-cluster">
-            <p>Any comments or suggestions?</p>
-            <textarea id="comments" placeholder="Enter your comment here..." class="input-textarea"></textarea>
-        </div>
-        <div class="form-cluster">
-            <button id="submit" type="submit" class="submit-btn">
-                SUBMIT
-            </button>
-        </div>
-    </form>
+    <div class="form-cluster">
+      <p class="form-para">
+        Which of these areas would you like to see more channels of?&nbsp;
+        <span>(Check all that apply)</span>
+      </p>
+      <label
+        ><input
+          name="promote"
+          value="movies-entertainment"
+          type="checkbox"
+        />Movies & Entertainment</label
+      >
+      <label
+        ><input
+          name="promote"
+          value="documentaries-lifestyle"
+          type="checkbox"
+        />Documentaries & Lifestyle</label
+      >
+      <label><input name="promote" value="sport" type="checkbox" />Sport</label>
+      <label
+        ><input name="promote" value="kids-teens" type="checkbox" />Kids &
+        Teens</label
+      >
+      <label
+        ><input name="promote" value="news-commerce" type="checkbox" />News &
+        Commerce</label
+      >
+    </div>
+
+    <div class="form-cluster">
+      <p class="form-para">Any comments or suggestions?</p>
+      <textarea
+        id="comments"
+        placeholder="Enter your comment here..."
+        class="input-textarea"
+      ></textarea>
+    </div>
+    <div class="form-cluster">
+      <button id="submit" type="submit" class="submit-btn">
+        SUBMIT
+      </button>
+    </div>
+  </form>
 </body>
